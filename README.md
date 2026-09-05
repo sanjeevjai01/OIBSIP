@@ -32,4 +32,6 @@ This is a Basic Weather App developed using Python. It fetches real-time weather
 
 ```bash
 pip install requests python-dotenv
+
+
 Developed By-Sanjeev Kumar Jaiswal
