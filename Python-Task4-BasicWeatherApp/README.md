@@ -1,4 +1,4 @@
-# Basic Weather App 🌦️
+# Weather App 🌦️
 
 ## Project Overview
 
