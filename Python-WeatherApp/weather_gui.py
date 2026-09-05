@@ -444,7 +444,7 @@ wind_value.pack(
 # -----------------------------
 footer_label = tk.Label(
     root,
-    text="By Sanjeev Kumar Jaiswal",
+    text="Developed By Sanjeev Kumar Jaiswal",
     font=("Segoe UI", 10),
     bg="#101827",
     fg="#8397B6"
