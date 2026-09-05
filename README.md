@@ -25,6 +25,8 @@ This is a Basic Weather App developed using Python. It fetches real-time weather
 - JSON
 - OpenWeatherMap API
 - python-dotenv
+  # Author
+  Developed by Sanjeev Kumar Jaiswal
 
 ## How to Run
 
@@ -34,4 +36,3 @@ This is a Basic Weather App developed using Python. It fetches real-time weather
 pip install requests python-dotenv
 
 
-Developed By-Sanjeev Kumar Jaiswal
