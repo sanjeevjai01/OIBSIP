@@ -9,9 +9,7 @@ load_dotenv()
 API_KEY = os.getenv("API_KEY")
 
 
-# -----------------------------
-# WEATHER FUNCTION
-# -----------------------------
+# WEATHER FUNCTION ----------------------------------
 def get_weather():
     city = city_entry.get().strip()
 
@@ -70,12 +68,12 @@ def get_weather():
         condition = data["weather"][0]["description"].title()
         wind_speed = data["wind"]["speed"]
 
-        # Update city name
+        # Update city name ---------------------
         location_label.config(
             text=f"📍 {city_name}, {country}"
         )
 
-        # Update temperature
+        # Update temperature -----------------------
         temperature_label.config(
             text=f"{temperature_c:.1f}°C"
         )
@@ -84,7 +82,7 @@ def get_weather():
             text=f"{temperature_f:.1f}°F"
         )
 
-        # Update other information
+        # Update other information ----------------------
         condition_value.config(
             text=condition
         )
@@ -97,7 +95,7 @@ def get_weather():
             text=f"{wind_speed} m/s"
         )
 
-        # Show weather card
+        # Show weather card -------------------------------
         weather_card.pack(
             pady=25,
             padx=35,
@@ -122,10 +120,7 @@ def get_weather():
             "Unable to fetch weather data."
         )
 
-
-# -----------------------------
-# MAIN WINDOW
-# -----------------------------
+# MAIN WINDOW --------------------
 root = tk.Tk()
 
 root.title("Weather App")
@@ -133,13 +128,10 @@ root.geometry("1000x750")
 root.minsize(800, 600)
 root.resizable(True, True)
 
-# Background
+# Background -------------------------
 root.configure(bg="#101827")
 
-
-# -----------------------------
-# HEADER
-# -----------------------------
+# HEADER -----------------------------
 header = tk.Frame(
     root,
     bg="#101827"
@@ -172,10 +164,8 @@ subtitle_label.pack(
     pady=(5, 0)
 )
 
+# SEARCH AREA ------------------------
 
-# -----------------------------
-# SEARCH AREA
-# -----------------------------
 search_frame = tk.Frame(
     root,
     bg="#182235"
@@ -212,9 +202,9 @@ city_entry.insert(
 )
 
 
-# -----------------------------
-# PLACEHOLDER
-# -----------------------------
+
+# PLACEHOLDER ---------------------------------
+
 def clear_placeholder(event):
     if city_entry.get() == "Enter city name or ZIP code":
         city_entry.delete(0, tk.END)
@@ -238,10 +228,7 @@ city_entry.bind(
     restore_placeholder
 )
 
-
-# -----------------------------
-# SEARCH BUTTON
-# -----------------------------
+# SEARCH BUTTON ---------------------------------
 search_button = tk.Button(
     search_frame,
     text="SEARCH",
@@ -263,10 +250,7 @@ search_button.pack(
     ipady=8
 )
 
-
-# -----------------------------
-# WEATHER CARD
-# -----------------------------
+# WEATHER CARD ------------------------
 weather_card = tk.Frame(
     root,
     bg="#182235"
@@ -308,10 +292,8 @@ fahrenheit_label.pack(
     pady=(0, 20)
 )
 
+# WEATHER DETAILS ---------------------------
 
-# -----------------------------
-# WEATHER DETAILS
-# -----------------------------
 details_frame = tk.Frame(
     weather_card,
     bg="#182235"
@@ -321,10 +303,7 @@ details_frame.pack(
     pady=(5, 25)
 )
 
-
-# -----------------------------
-# CONDITION
-# -----------------------------
+# CONDITION ---------------------------
 condition_box = tk.Frame(
     details_frame,
     bg="#243148"
@@ -360,10 +339,8 @@ condition_value.pack(
     pady=(0, 10)
 )
 
+# HUMIDITY -----------------------------------
 
-# -----------------------------
-# HUMIDITY
-# -----------------------------
 humidity_box = tk.Frame(
     details_frame,
     bg="#243148"
@@ -399,10 +376,8 @@ humidity_value.pack(
     pady=(0, 10)
 )
 
+# WIND -------------------------------------
 
-# -----------------------------
-# WIND
-# -----------------------------
 wind_box = tk.Frame(
     details_frame,
     bg="#243148"
@@ -438,10 +413,8 @@ wind_value.pack(
     pady=(0, 10)
 )
 
+# FOOTER--------------------------------
 
-# -----------------------------
-# FOOTER
-# -----------------------------
 footer_label = tk.Label(
     root,
     text="Developed By Sanjeev Kumar Jaiswal",
@@ -456,16 +429,15 @@ footer_label.pack(
 )
 
 
-# -----------------------------
-# ENTER KEY SUPPORT
-# -----------------------------
+# ENTER KEY SUPPORT ----------------------------------
+
 root.bind(
     "<Return>",
     lambda event: get_weather()
 )
 
 
-# -----------------------------
-# START APPLICATION
-# -----------------------------
+
+# START APPLICATION ------------------------
+
 root.mainloop()
