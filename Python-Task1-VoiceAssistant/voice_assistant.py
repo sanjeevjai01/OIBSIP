@@ -8,7 +8,7 @@ sys.modules["pyaudio"] = pyaudio
 
 import speech_recognition as sr
 
-# TEXT TO SPEECH
+# TEXT TO SPEECH ------------------------------------------------
 
 def speak(text):
     print("Assistant:", text)
@@ -35,7 +35,8 @@ engine.stop()
         print("TTS Error:", error)
 
 
-# VOICE INPUT
+# VOICE INPUT -------------------------------------------------
+
 recognizer = sr.Recognizer()
 
 recognizer.energy_threshold = 300
@@ -81,7 +82,8 @@ def listen():
 
 
 
-# MAIN
+# MAIN------------------------------------------------
+
 def main():
 
     print("=" * 50)
@@ -98,7 +100,8 @@ def main():
     print("Bye / Stop / Exit")
     print("=" * 50)
 
-    # Microphone calibration
+    # Microphone calibration----------------------------------
+
     print("\nCalibrating microphone...")
 
     with sr.Microphone() as source:
@@ -118,9 +121,9 @@ def main():
         if not command:
             continue
 
-        # ==========================
-        # STOP / BYE
-        # ==========================
+        
+        # STOP / BYE -----------------------------------------
+        
         if (
             command == "bye"
             or command == "goodbye"
@@ -137,9 +140,9 @@ def main():
             print("Assistant stopped.")
             break
 
-        # ==========================
-        # GREETING
-        # ==========================
+        
+        # GREETING--------------------------------------------------
+        
         elif (
             "hello" in command
             or "hi" in command
@@ -147,9 +150,9 @@ def main():
         ):
             speak("Hello Sanjeev. How can I help you?")
 
-        # ==========================
-        # TIME
-        # ==========================
+    
+        # TIME ------------------------------------------------------
+    
         elif (
             "what time" in command
             or "what is the time" in command
@@ -162,9 +165,9 @@ def main():
 
             speak(f"The current time is {current_time}.")
 
-        # ==========================
-        # DATE
-        # ==========================
+    
+        # DATE ---------------------------------------------------------
+        
         elif (
             "today's date" in command
             or "todays date" in command
@@ -178,9 +181,9 @@ def main():
 
             speak(f"Today is {current_date}.")
 
-        # ==========================
-        # DAY
-        # ==========================
+
+        # DAY -----------------------------------------------------------
+    
         elif (
             "what day is today" in command
             or "what day is it" in command
@@ -193,9 +196,9 @@ def main():
 
             speak(f"Today is {current_day}.")
 
-        # ==========================
-        # GOOGLE
-        # ==========================
+    
+        # GOOGLE --------------------------------------------------------
+
         elif (
             "open google" in command
             or command == "google"
@@ -203,9 +206,9 @@ def main():
             speak("Opening Google.")
             webbrowser.open("https://www.google.com")
 
-        # ==========================
-        # YOUTUBE
-        # ==========================
+    
+        # YOUTUBE --------------------------------------------------------
+    
         elif (
             "open youtube" in command
             or command == "youtube"
@@ -213,15 +216,15 @@ def main():
             speak("Opening YouTube.")
             webbrowser.open("https://www.youtube.com")
 
-        # ==========================
-        # UNKNOWN COMMAND
-        # ==========================
+    
+        # UNKNOWN COMMAND --------------------------------------------
+    
         else:
             speak("Sorry, I did not understand that command.")
 
 
-# ==============================
-# START PROGRAM
-# ==============================
+
+# START PROGRAM ------------------------------------------------------
+
 if __name__ == "__main__":
     main()
