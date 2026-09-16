@@ -1,4 +1,4 @@
-# Weather App 🌦️
+# Basic Weather App 🌦️
 ## 🌐 Live Demo
 
 [Click here to view the Weather App](https://oibsip-mwi9.onrender.com/)
