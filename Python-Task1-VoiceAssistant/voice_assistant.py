@@ -6,7 +6,7 @@ import webbrowser
 import pyaudiowpatch as pyaudio
 sys.modules["pyaudio"] = pyaudio
 
-import speech_recognition as sr
+import speech_recognition as sr 
 
 # TEXT TO SPEECH ------------------------------------------------
 
