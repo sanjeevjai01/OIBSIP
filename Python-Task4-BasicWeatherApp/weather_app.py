@@ -57,7 +57,7 @@ try:
 
 
     
-        # GET WEATHER INFORMATION -----------------------------------------
+        # GET WEATHER INFORMATION ----------------------------------------
 
         temperature_c = data["main"]["temp"]
 
