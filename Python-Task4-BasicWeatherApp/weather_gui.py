@@ -9,7 +9,7 @@ load_dotenv()
 API_KEY = os.getenv("API_KEY")
 
 
-# WEATHER FUNCTION ---------------------------------
+# WEATHER FUNCTION --------------------------------
 def get_weather():
     city = city_entry.get().strip()
 
