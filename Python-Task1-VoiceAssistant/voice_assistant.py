@@ -8,7 +8,7 @@ sys.modules["pyaudio"] = pyaudio
 
 import speech_recognition as sr 
 
-# TEXT TO SPEECH ------------------------------------------------
+# TEXT TO SPEECH -------------------------------------
 
 def speak(text):
     print("Assistant:", text)
