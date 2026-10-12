@@ -37,7 +37,7 @@ params = {
 
 try:
 
-    # Send request to OpenWeatherMap --------------------------
+    # Send request to OpenWeatherMap -------------------------
     response = requests.get(url, params=params, timeout=10)
 
 
