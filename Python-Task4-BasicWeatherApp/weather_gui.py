@@ -95,7 +95,7 @@ def get_weather():
             text=f"{wind_speed} m/s"
         )
 
-        # Show weather card -------------------------------
+        # Show weather card ------------------------------
         weather_card.pack(
             pady=25,
             padx=35,
