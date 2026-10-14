@@ -7,7 +7,7 @@ PORT = 5000
 
 
 def receive_messages(client):
-    while True:
+    while True: 
         try:
             message = client.recv(1024).decode("utf-8")
 
