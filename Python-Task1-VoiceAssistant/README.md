@@ -9,7 +9,7 @@ The assistant can perform basic tasks such as greeting the user, telling the cur
 ## Features
 
 - Voice-based interaction
-- Greeting response
+- Greeting response 
 - Tells the current time
 - Tells the current date
 - Tells the current day
