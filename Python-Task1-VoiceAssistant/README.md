@@ -6,7 +6,7 @@ This project is a beginner-friendly voice assistant developed using Python. It u
 
 The assistant can perform basic tasks such as greeting the user, telling the current time and date, opening Google and YouTube, and stopping when the user says a stop command.
 
-## Features
+## Features 
 
 - Voice-based interaction
 - Greeting response 
