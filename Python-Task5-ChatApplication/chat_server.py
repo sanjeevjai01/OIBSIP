@@ -53,7 +53,7 @@ def handle_client(client):
             message = client.recv(1024)
 
             if not message:
-                break
+                break 
 
             text = message.decode("utf-8")
 
