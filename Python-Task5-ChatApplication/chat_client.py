@@ -74,6 +74,7 @@ def start_client():
     except Exception as error:
         print("\nError:", error)
 
+
     finally:
         client.close()
         print("\nChat application closed.")
